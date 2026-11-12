@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffe0ec, #ffb6d0, #ffc8dd);
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    perspective: 1000px;
+}
+
+.card {
+    background: #fffdf5;
+    padding: 35px 25px;
+    border-radius: 5px 5px 25px 25px;
+    border-left: 4px solid #c76b91;
+    box-shadow: 0 15px 40px rgba(150, 50, 90, 0.2);
+    position: relative;
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    color: #a34d6b;
+    font-style: italic;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.message {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.message p {
+    margin-bottom: 13px;
+}
+
+.cute {
+    text-align: center;
+    font-size: 75px;
+    margin: 25px 0;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.footer {
+    color: #a34d6b;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ff4081;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff4f87, #d63384);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #e88aaa;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #e88aaa;
+}
+
+#extra {
+    display: none;
+    text-align: center;
+    color: #a34d6b;
+    margin-top: 20px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Dear My Love,</h2>
+
+        <div class="message">
+
+            <p>
+                Today the world celebrates the day you were born,
+                and I get to celebrate the person who makes my whole
+                life brighter. I still remember the first time I saw
+                your smile — the world stopped, and I knew I was
+                done for. 💝
+            </p>
+
+            <p>
+                You turn ordinary moments into my favorite memories.
+                The way you laugh at silly things, the way you care
+                about everyone so deeply, the way your eyes light up
+                when you talk about something you love —
+                I fall for you all over again every single time.
+            </p>
+
+            <p>
+                You know how Bubu can't stay away from Dudu?
+                That's exactly us. I'm your Bubu!
+            </p>
+
+        </div>
+
+        <div class="cute">
+            🧸💗🐻
+        </div>
+
+        <div class="footer">
+            Forever yours 💖
+        </div>
+
+        <button onclick="showLove()">
+            Open My Heart ❤️
+        </button>
+
+        <div id="extra">
+            <h3>Happy Birthday My Love! 🎂</h3>
+            <p>
+                May your life always be filled with happiness,
+                love and beautiful memories.
+                I love you so much! ❤️
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+// Floating hearts animation
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (Math.random() * 3 + 3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+
+}
+
+setInterval(createHeart, 500);
+
+
+// Love button
+
+function showLove() {
+
+    const extra = document.getElementById("extra");
+
+    extra.style.display = "block";
+
+}
+
+</script>
+
+</body>
+</html>
